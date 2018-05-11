@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Advertisements;
 
 public class MainMenuManager : MonoBehaviour {
 
@@ -22,7 +23,9 @@ public class MainMenuManager : MonoBehaviour {
 	void Start () {
 		//PlayerPrefs.DeleteAll ();
 		menuActive = false;
-	}
+        Advertisement.Initialize("1797201");
+
+    }
 	
 	// Update is called once per frame
 	void Update () {

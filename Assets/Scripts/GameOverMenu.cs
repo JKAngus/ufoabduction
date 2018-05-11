@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Advertisements;
 
 public class GameOverMenu : MonoBehaviour {
 
@@ -72,4 +73,10 @@ public class GameOverMenu : MonoBehaviour {
 	public void randomize(){
 		tipsText.text = Tips [Random.Range (0, numberOfTips)];
 	}
+
+    public void showAD()
+    {
+        if (Advertisement.IsReady())
+            Advertisement.Show();
+    }
 }
